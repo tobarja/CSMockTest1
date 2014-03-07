@@ -9,5 +9,7 @@ namespace CSMockTest1.Views
     public interface IMainView
     {
         void setController(MainViewController mainViewController);
+
+        void setDisplayText(string textToDisplay);
     }
 }

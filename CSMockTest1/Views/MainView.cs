@@ -24,5 +24,10 @@ namespace CSMockTest1.Views
         {
             Controller = mainViewController;
         }
+
+        public void setDisplayText(string textToDisplay)
+        {
+            this.label1.Text = textToDisplay;
+        }
     }
 }

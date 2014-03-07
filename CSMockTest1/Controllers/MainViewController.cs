@@ -14,5 +14,10 @@ namespace CSMockTest1.Controllers
         {
             view = _view;
         }
+
+        public void setTextToDisplay(string textToDisplay)
+        {
+            //view.setDisplayText(textToDisplay);
+        }
     }
 }
