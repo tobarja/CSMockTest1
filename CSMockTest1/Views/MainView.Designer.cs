@@ -1,4 +1,4 @@
-﻿namespace CSMockTest1
+﻿namespace CSMockTest1.Views
 {
     partial class MainView
     {

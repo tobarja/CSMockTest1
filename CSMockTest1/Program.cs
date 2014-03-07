@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using CSMockTest1.Views;
+using CSMockTest1.Controllers;
 
 namespace CSMockTest1
 {
@@ -15,7 +17,10 @@ namespace CSMockTest1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainView());
+            MainView mainView = new MainView();
+            MainViewController mainViewController = new MainViewController(mainView);
+            mainView.setController(mainViewController);
+            Application.Run(mainView);
         }
     }
 }
