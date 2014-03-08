@@ -21,5 +21,15 @@ namespace CSMockTest1Tests
             sut.setTextToDisplay("123");
             mockFactory.VerifyAllExpectationsHaveBeenMet();
         }
+
+        [Test]
+        public void ExpectsWithMoq()
+        {
+            var _view = new Moq.Mock<IMainView>();
+            _view.Setup(_ => _.setDisplayText("123")).Verifiable();
+            MainViewController sut = new MainViewController(_view.Object);
+            sut.setTextToDisplay("123");
+            _view.VerifyAll();
+        }
     }
 }
